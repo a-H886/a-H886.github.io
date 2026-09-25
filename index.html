@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>恒 · 个人主页</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #05070f;
+      color: #e6ecff;
+      overflow-x: hidden;
+    }
+
+    /* ===== 弹窗遮罩 ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 6, 15, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal-box {
+      background: linear-gradient(145deg, #0d1428, #131f3d);
+      border: 1px solid rgba(0, 200, 255, 0.35);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 0 40px rgba(0, 200, 255, 0.25);
+      animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-box h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #00e5ff, #7c4dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .modal-box p {
+      font-size: 20px;
+      color: #ffd6e8;
+      margin-bottom: 28px;
+    }
+
+    .modal-box .heart { color: #ff4d8d; }
+
+    .close-btn {
+      background: linear-gradient(90deg, #00e5ff, #7c4dff);
+      color: #05070f;
+      border: none;
+      padding: 12px 36px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .close-btn:hover { transform: scale(1.05); }
+
+    /* ===== 主页内容 ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(0, 229, 255, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(124, 77, 255, 0.15), transparent 40%),
+        #05070f;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      letter-spacing: 12px;
+      background: linear-gradient(90deg, #00e5ff, #7c4dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #9fb4d8;
+      max-width: 520px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 进入弹窗 -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+      <h1>欢迎进入</h1>
+      <p>欣悦喜欢小语 <span class="heart">❤️</span></p>
+      <button class="close-btn" onclick="closeModal()">进入主页</button>
+    </div>
+  </div>
+
+  <!-- 主页 -->
+  <section class="hero">
+    <h1>恒</h1>
+    <p>这里是我的个人主页。<br>欣悦喜欢小语，其他由你自由发挥。</p>
+  </section>
+
+  <script>
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>恒 · 个人主页</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #05070f;
+      color: #e6ecff;
+      overflow-x: hidden;
+    }
+
+    /* ===== 弹窗遮罩 ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 6, 15, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal-box {
+      background: linear-gradient(145deg, #0d1428, #131f3d);
+      border: 1px solid rgba(0, 200, 255, 0.35);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 0 40px rgba(0, 200, 255, 0.25);
+      animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-box h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #00e5ff, #7c4dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .modal-box p {
+      font-size: 20px;
+      color: #ffd6e8;
+      margin-bottom: 28px;
+    }
+
+    .modal-box .heart { color: #ff4d8d; }
+
+    .close-btn {
+      background: linear-gradient(90deg, #00e5ff, #7c4dff);
+      color: #05070f;
+      border: none;
+      padding: 12px 36px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .close-btn:hover { transform: scale(1.05); }
+
+    /* ===== 主页内容 ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(0, 229, 255, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(124, 77, 255, 0.15), transparent 40%),
+        #05070f;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      letter-spacing: 12px;
+      background: linear-gradient(90deg, #00e5ff, #7c4dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #9fb4d8;
+      max-width: 520px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 进入弹窗 -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+      <h1>欢迎进入</h1>
+      <p>欣悦喜欢小语 <span class="heart">❤️</span></p>
+      <button class="close-btn" onclick="closeModal()">进入主页</button>
+    </div>
+  </div>
+
+  <!-- 主页 -->
+  <section class="hero">
+    <h1>恒</h1>
+    <p>这里是我的个人主页。<br>欣悦喜欢小语，其他由你自由发挥。</p>
+  </section>
+
+  <script>
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
